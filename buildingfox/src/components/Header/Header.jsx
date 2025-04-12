@@ -1,6 +1,6 @@
-import React from "react";
-import "./Header.css";
-import { useState } from "react";
+import React, { useState } from 'react';
+import './Header.css';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -9,64 +9,80 @@ const Header = () => {
     setIsMobile(!isMobile);
   };
 
+  const menuVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.3,
+        ease: 'easeOut',
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: 'easeOut',
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.2,
+        ease: 'easeIn',
+      },
+    },
+  };
+
   return (
-    <>
-      <div className="nav-container">
-        <div className="nav-bar">
-          <nav>
-            <h1>
-              <a href="#">
-                <img src="./logo.png" alt="logo" width={"120px"} />
-              </a>
-            </h1>
+    <div className="nav-container">
+      <div className="nav-bar">
+        <nav>
+          <h1>
+            <a href="#"><img src="./logo.png" alt="logo" width={'120px'} /></a>
+          </h1>
 
-            <ul className={"nav-list" + (isMobile ? " mobile" : "")}>
-              <li>
-                <a href="#home" onClick={() => setIsMobile(false)}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#services" onClick={() => setIsMobile(false)}>
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#about" onClick={() => setIsMobile(false)}>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#contact" onClick={() => setIsMobile(false)}>
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#testimonial" onClick={() => setIsMobile(false)}>
-                  Testimonial
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/94771070673"
-                  target="_blank"
-                  onClick={() => setIsMobile(false)}
-                >
-                  <img src="./whatsapp.png" />{" "}
-                </a>
-              </li>
-            </ul>
+          {/* AnimatePresence allows exit animations */}
+          <AnimatePresence>
+            {isMobile && (
+              <motion.ul
+                className="nav-list mobile"
+                variants={menuVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                <li><a href="#home" onClick={() => setIsMobile(false)}>Home</a></li>
+                <li><a href="#services" onClick={() => setIsMobile(false)}>Services</a></li>
+                <li><a href="#about" onClick={() => setIsMobile(false)}>About</a></li>
+                <li><a href="#contact" onClick={() => setIsMobile(false)}>Contact</a></li>
+                <li><a href="#testimonial" onClick={() => setIsMobile(false)}>Testimonial</a></li>
+                <li><a href="https://wa.me/94771070673" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobile(false)}><img src="./whatsapp.png" alt="WhatsApp"/></a></li>
+              </motion.ul>
+            )}
+          </AnimatePresence>
 
-            {/* Hamburger Menu Icon */}
-            <div className="hamburger" onClick={handleToggle}>
-              <div className="line"></div>
-              <div className="line"></div>
-              <div className="line"></div>
-            </div>
-          </nav>
-        </div>
+          {/* Desktop Menu */}
+          <ul className="nav-list desktop">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="https://wa.me/94771070673" target="_blank" rel="noopener noreferrer"><img src="./whatsapp.png" alt="WhatsApp"/></a></li>
+          </ul>
+
+          {/* Hamburger */}
+          <div className="hamburger" onClick={handleToggle}>
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
+        </nav>
       </div>
-    </>
+    </div>
   );
 };
 
