@@ -37,12 +37,21 @@ const Header = () => {
   };
 
   return (
-    <div className="nav-container">
+    <div className="hero-section">
+        <div className="background"><img src="./design.png" alt="background" /></div>
+        <div className="headline">
+            <h1 id='heading'>Building Fox</h1>
+            <p>Your trusted partner in construction.</p>
+            <button className="hero-button">Get Started</button>
+        </div>
+        <div className="nav-container">
       <div className="nav-bar">
         <nav>
-          <h1>
-            <a href="#"><img src="./logo.png" alt="logo" width={'120px'} /></a>
+            <div className="logo">
+            <h1>
+            <a href="#"><img src="./logo_.png" alt="logo" width={'120px'} /></a>
           </h1>
+            </div>
 
           {/* AnimatePresence allows exit animations */}
           <AnimatePresence>
@@ -71,7 +80,8 @@ const Header = () => {
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#testimonial">Testimonial</a></li>
-            <li><a href="https://wa.me/94771070673" target="_blank" rel="noopener noreferrer"><img src="./whatsapp.png" alt="WhatsApp"/></a></li>
+            <li><a href="https://wa.me/94771070673" target="_blank" rel="noopener noreferrer"><img src="./whatsapp.png" alt="WhatsApp"/></a>
+            </li>
           </ul>
 
           {/* Hamburger */}
@@ -82,6 +92,7 @@ const Header = () => {
           </div>
         </nav>
       </div>
+    </div>
     </div>
   );
 };
