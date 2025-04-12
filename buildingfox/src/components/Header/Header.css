@@ -5,7 +5,7 @@
         object-position: center;
         filter: brightness(0.5);
         height: 100vh;
-        filter: blur(1px);
+        filter: blur(2px);
     }
  
  
@@ -25,6 +25,43 @@
     font-family: "DM Serif Text", serif;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
+    position: relative;
+    top: -29rem;
+    font-size: 6rem;
+    font-palette: light;
+    color: floralwhite;
+    text-shadow: 6px -6px 12px black;
+  }
+
+  #para{
+    position: relative;
+    text-align: center;
+    top: -28rem;
+    margin: 0px 7rem;
+    color: white;
+    font-weight: 600;
+    text-shadow: 2px 0px 20px black;
+  }
+
+
+  .hero-button{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    top: -26rem;
+    padding: 10px;
+    border-radius: .5rem;
+    border: none;
+    transition: auto;
+  }
+
+  .hero-button:hover{
+    background-color: #e3645e;
+    color: #000;
+    transition: all 0.4s linear;
+    transform: scale(1.1);
+    padding: 10px;
   }
   
   /* ===== Navbar Layout ===== */
@@ -56,17 +93,16 @@
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.12rem;
     transition: all 0.1s ease-in-out;
 
   }
   
   .nav-list li a:hover {
-    color: #03080e;
+    color: #c12f28;
     transition: all 0.3s ease-in-out;
     transform: scale(1.1);
-    font-size: 1.112rem;
-    padding: 5px;
+    font-size: 1.13rem;
   }
   
   /* ===== WhatsApp Icon ===== */

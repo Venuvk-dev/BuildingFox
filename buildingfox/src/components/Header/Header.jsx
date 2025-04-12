@@ -40,9 +40,9 @@ const Header = () => {
     <div className="hero-section">
         <div className="background"><img src="./design.png" alt="background" /></div>
         <div className="headline">
-            <h1 id='heading'>Building Fox</h1>
-            <p>Your trusted partner in construction.</p>
-            <button className="hero-button">Get Started</button>
+            <h1 id='heading'>Precision Built in every day</h1>
+            <p id='para'>At BUILDING FOX, we believe that great construction begins with great understanding. From the first conversation, our focus is on bringing your vision to life with clarity, care, and expert attention to detail. Whether you're starting something new or refining an existing idea, we're here to make the process smooth, transparent, and truly collaborative — no matter where in the world you are.</p>
+            <center><button className="hero-button">Get Started</button></center>
         </div>
         <div className="nav-container">
       <div className="nav-bar">
