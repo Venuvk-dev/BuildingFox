@@ -53,15 +53,15 @@
     padding: 10px;
     border-radius: .5rem;
     border: none;
-    transition: auto;
+    transition: all 0.4s linear;
   }
 
   .hero-button:hover{
     background-color: #e3645e;
     color: #000;
-    transition: all 0.4s linear;
-    transform: scale(1.1);
+    
     padding: 10px;
+    scale: 1.1;
   }
   
   /* ===== Navbar Layout ===== */
@@ -94,19 +94,17 @@
     color: #ffffff;
     font-weight: 500;
     font-size: 1.12rem;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
   }
   
   .nav-list li a:hover {
     color: #c12f28;
-    transition: all 0.3s ease-in-out;
-    transform: scale(1.1);
-    font-size: 1.13rem;
+    scale:1.2;
   }
   
   /* ===== WhatsApp Icon ===== */
-  .nav-list li img {
+   .nav-list li img {
     width: 24px;
     height: 24px;
   }
