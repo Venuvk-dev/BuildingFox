@@ -164,7 +164,7 @@
 
 /* When scrolled */
 .nav-bar.scrolled {
-  background: rgb(0, 0, 0); /* light translucent */
+  background: rgba(0, 0, 0, 0.5); /* light translucent */
   backdrop-filter: blur(10px);           /* blur background */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
