@@ -69,6 +69,9 @@
   scale: 1.1;
 }
 
+
+
+
 /* ===== Navbar Layout ===== */
 .nav-bar nav {
   display: flex;
@@ -104,9 +107,20 @@
   transition: all 0.3s ease-in-out;
 }
 
-.nav-list li a:hover {
+.border-line{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.12rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.border-line:hover {
+  padding: 7px;
   color: #c12f28;
-  scale: 1.2;
+  scale: 1.1;
+  border: 2px solid brown;
+  border-radius: 10px;
 }
 
 /* ===== WhatsApp Icon ===== */
@@ -117,7 +131,9 @@
 
 .nav-list li img:hover {
   transform: scale(1.1);
+  border: none;
 }
+
 
 /* ===== Hamburger Icon ===== */
 .hamburger {
@@ -132,8 +148,30 @@
 .hamburger .line {
   width: 25px;
   height: 3px;
-  background-color: #333;
+  background-color: #ffffff;
   border-radius: 2px;
+}
+
+/* Default Navbar */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+/* When scrolled */
+.nav-bar.scrolled {
+  background: rgb(0, 0, 0); /* light translucent */
+  backdrop-filter: blur(10px);           /* blur background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-bar.nav-bar.scrolled nav .logo img {
+  filter: invert(2);
+  max-width: 100px;
 }
 
 /* ===== Responsive (Mobile View) ===== */
