@@ -80,7 +80,7 @@
 /* ===== Logo ===== */
 .nav-bar h1 img {
   max-width: 120px;
-  transition: all 0.7s linear;
+  transition: all 0.3s linear;
   filter: brightness(0);
 }
 

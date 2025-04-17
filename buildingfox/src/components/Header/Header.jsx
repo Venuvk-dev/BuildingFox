@@ -43,7 +43,6 @@ const Header = () => {
             <center>
             <h1 id='heading'>Elevate your future With</h1>
             <h1 id='nxtLine'> Building Fox</h1>
-            <p id='para'>At BUILDING FOX, we believe that great construction begins with great understanding. From the first conversation, our focus is on bringing your vision to life with clarity, care, and expert attention to detail. Whether you're starting something new or refining an existing idea, we're here to make the process smooth, transparent, and truly collaborative — no matter where in the world you are.</p>
             <button className="hero-button">Get Started</button>
             </center>
         </div>
